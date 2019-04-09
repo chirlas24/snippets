@@ -179,10 +179,10 @@ clf.fit(X,y)
 
 ### Gradient Boosted in Sklearn
 Parameters:
-*N_estimators: Number of trees
-*learning_rate: Learning Rate of the Boosted Tree
-*Max_depth: Number of Splits
-*Min_samples_leaf: Minimum number of observations per leaf
+* N_estimators: Number of trees
+* learning_rate: Learning Rate of the Boosted Tree
+* Max_depth: Number of Splits
+* Min_samples_leaf: Minimum number of observations per leaf
 ```python
 # Load the library
 from sklearn.ensemble import GradientBoostingClassifier
