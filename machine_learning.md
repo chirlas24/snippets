@@ -109,6 +109,18 @@ regd = DecisionTreeRegressor(max_depth=3)
 regd.fit(X,y)
 ```
 
+### Random Forest
+* Max_depth: Number of Splits
+* Min_samples_leaf: Minimum number of observations per leaf
+```python
+# Load the library
+from sklearn.tree import DecisionTreeRegressor
+# Create an instance
+regd = DecisionTreeRegressor(max_depth=3)
+# Fit the data
+regd.fit(X,y)
+```
+
 ## Classification
 
 ### Logisitc Regression
