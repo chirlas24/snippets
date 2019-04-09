@@ -1,7 +1,17 @@
 # Machine Learning Snippets
 ## GridSearch
 ```python
+# Load the library
 from sklearn.model_selection import GridSearchCV
+# Create an instance of the model
+GridModel = GridSearchCV(model(),
+                         param_grid={"n_neighbors":np.arange(3,50)})
+# Fit will test all of the combinations
+reg_test.fit(X,y)
+```
+## RandomizeSearch
+```python
+from sklearn.model_selection import RandomizedSearchCV
 from sklearn.neighbors import KNeighborsRegressor
 reg_test = GridSearchCV(KNeighborsRegressor(),
  param_grid={"n_neighbors":np.arange(3,50)})
