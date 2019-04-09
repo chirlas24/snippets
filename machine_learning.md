@@ -1,13 +1,51 @@
 # Machine Learning Snippets
+
+## train_test_split
+```python
+# Load the library
+from sklearn.model_selection import train_test_split
+# Split the datset
+X_train, X_test, y_train, y_test = train_test_split(X,
+                                                    y,
+                                                    test_size=p #Value between 0-1 as percentage,
+                                                    random_state=xx #In case of seed needed)
+```
+
+## CrossValidation
+```python
+# Load the library
+from sklearn.model_selection import cross_val_score
+# Execute cross validation
+cross_val_score(model(),
+                X,
+                y,
+                cv=n, #Number of splits
+                scoring="metric_to_be_used" #the metric to calculate
+                                     )
+# Evaluate the uniformity of the dataset with histogram
+
+# Get the mean value with .mean()
+```
+
 ## GridSearch
 ```python
 # Load the library
 from sklearn.model_selection import GridSearchCV
 # Create an instance of the model
 GridModel = GridSearchCV(model(),
-                         param_grid={"n_neighbors":np.arange(3,50)})
+                         param_grid={"hyperparameter_1":[vaules],
+                                     "hyperparameter_2":[vaules]
+                                     ,...},
+                         cv=n #In case of cross validation
+                         scoring="metric_to_be_used" #the metric in order to evaluate
+                                     )
 # Fit will test all of the combinations
-reg_test.fit(X,y)
+GridModel.fit(X,y)
+
+#Get the values
+GridModel.best_params_ #Shows the best hyperparameters
+GridModel.best_score_  #Shows the best score achived
+GridModel.best_estimator_ #Returns the best model
 ```
 ## RandomizeSearch
 ```python
