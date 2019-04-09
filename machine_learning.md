@@ -108,19 +108,6 @@ regd = DecisionTreeRegressor(max_depth=3)
 # Fit the data
 regd.fit(X,y)
 ```
-
-### Random Forest
-* Max_depth: Number of Splits
-* Min_samples_leaf: Minimum number of observations per leaf
-```python
-# Load the library
-from sklearn.tree import DecisionTreeRegressor
-# Create an instance
-regd = DecisionTreeRegressor(max_depth=3)
-# Fit the data
-regd.fit(X,y)
-```
-
 ## Classification
 
 ### Logisitc Regression
@@ -170,5 +157,37 @@ from sklearn.tree import DecisionTreeClassifier
 # Create instance
 clf = DecisionTreeClassifier(min_samples_leaf=20,max_depth=3)
 # Fit
+clf.fit(X,y)
+```
+
+
+## Ensemble models
+
+### Random Forest
+Parameters:
+* N_estimators: Number of trees
+* Max_depth: Number of Splits
+* Min_samples_leaf: Minimum number of observations per leaf
+```python
+#Load the library
+from sklearn.ensemble import RandomForestClassifier
+# Create an instance
+clf = RandomForestClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
+
+### Gradient Boosted in Sklearn
+Parameters:
+*N_estimators: Number of trees
+*learning_rate: Learning Rate of the Boosted Tree
+*Max_depth: Number of Splits
+*Min_samples_leaf: Minimum number of observations per leaf
+```python
+# Load the library
+from sklearn.ensemble import GradientBoostingClassifier
+# Create an instance
+clf = GradientBoostingClassifier(max_depth=4)
+# Fit the data
 clf.fit(X,y)
 ```
