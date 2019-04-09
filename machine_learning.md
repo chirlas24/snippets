@@ -34,9 +34,9 @@ from sklearn.model_selection import GridSearchCV
 # Create an instance of the model
 GridModel = GridSearchCV(model(),
                          param_grid={"hyperparameter_1":[vaules],
-                                     "hyperparameter_2":[vaules]
-                                     ,...},
-                         cv=n #In case of cross validation
+                                     "hyperparameter_2":[vaules],
+                                     ...},
+                         cv=n, #In case of cross validation
                          scoring="metric_to_be_used" #the metric in order to evaluate
                                      )
 # Fit will test all of the combinations
@@ -49,13 +49,24 @@ GridModel.best_estimator_ #Returns the best model
 ```
 ## RandomizeSearch
 ```python
+# Load the library
 from sklearn.model_selection import RandomizedSearchCV
-from sklearn.neighbors import KNeighborsRegressor
-reg_test = GridSearchCV(KNeighborsRegressor(),
- param_grid={"n_neighbors":np.arange(3,50)})
+# Create an instance of the model
+RandomizedModel = RandomizedSearchCV(model(),
+                                     param_distributions={"hyperparameter_1":[vaules],
+                                                          "hyperparameter_2":[vaules],
+                                                           ...},
+                                     cv=n, #In case of cross validation
+                                     scoring="metric_to_be_used", #the metric in order to evaluate
+                                     n_iter=n #Number of iterations
+                                     )
 # Fit will test all of the combinations
-reg_test.fit(X,y)
-```
+RandomizedModel.fit(X,y)
+
+#Get the values
+RandomizedModel.best_params_ #Shows the best hyperparameters
+RandomizedModel.best_score_  #Shows the best score achived
+RandomizedModel.best_estimator_ #Returns the best model
 
 ## Regression
 
