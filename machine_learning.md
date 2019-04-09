@@ -67,6 +67,7 @@ RandomizedModel.fit(X,y)
 RandomizedModel.best_params_ #Shows the best hyperparameters
 RandomizedModel.best_score_  #Shows the best score achived
 RandomizedModel.best_estimator_ #Returns the best model
+```
 
 ## Regression
 
