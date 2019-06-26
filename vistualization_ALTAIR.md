@@ -3,9 +3,7 @@
 ## Web And Documentation
 https://altair-viz.github.io/index.html
 
-### Times series with filter of times series with
-### bar chart for month
-### and dinamic and filtered bar chart 
+### Times series with filter of times series with bar chart for month and dinamic and filtered bar chart 
 ```python
 width = 1200
 height = 300
