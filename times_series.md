@@ -30,6 +30,9 @@ plt.show()
 pred = results.get_prediction(start=pd.to_datetime('1998-01-01'), dynamic=False)
 ```
 
+## How to use the model:
+https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3
+
 ## Little help for the times series hyperparameters understanding
 https://towardsdatascience.com/understanding-the-hyperparameters-of-a-simple-time-series-model-631f26c46c9
 
