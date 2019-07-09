@@ -16,6 +16,18 @@ mod = sm.tsa.statespace.SARIMAX( y
                                 , seasonal_order=(P,D,Q,S)
                                 , enforce_invertibility=False
                                 , freq='M'  )
+                                
+results = mod.fit()
+
+#Resultados de la estimacion:
+print(results.summary().tables[1])
+
+#Diagnostico de la estimacion:
+results.plot_diagnostics(figsize=(15, 12))
+plt.show()
+
+#Prediction
+pred = results.get_prediction(start=pd.to_datetime('1998-01-01'), dynamic=False)
 ```
 
 ## Little help for the times series hyperparameters understanding
