@@ -35,6 +35,8 @@ cross_val_score(model(),
 ```python
 # Load the library
 from sklearn.model_selection import GridSearchCV
+# For metrics
+import sklearn.metrics
 # Create an instance of the model
 GridModel = GridSearchCV(model(),
                          param_grid={"hyperparameter_1":[vaules],
@@ -55,6 +57,8 @@ GridModel.best_estimator_ #Returns the best model
 ```python
 # Load the library
 from sklearn.model_selection import RandomizedSearchCV
+# For metrics
+import sklearn.metrics
 # Create an instance of the model
 RandomizedModel = RandomizedSearchCV(model(),
                                      param_distributions={"hyperparameter_1":[vaules],
