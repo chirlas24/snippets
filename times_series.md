@@ -36,7 +36,7 @@ https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecast
 ## Little help for the times series hyperparameters understanding
 https://towardsdatascience.com/understanding-the-hyperparameters-of-a-simple-time-series-model-631f26c46c9
 
-## Manually grid search:
+## Manually grid search (EXAMPLE):
 ```python
 # Define the p, d and q parameters to take any value between 0 and 2
 p = d = q = range(0, 2)
