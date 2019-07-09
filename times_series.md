@@ -27,7 +27,11 @@ results.plot_diagnostics(figsize=(15, 12))
 plt.show()
 
 #Prediction
-pred = results.get_prediction(start=pd.to_datetime('1998-01-01'), dynamic=False)
+prediction = results.get_prediction(start=pd.to_datetime('2019-06-30'),end=pd.to_datetime('2020-02-29'))
+#Intervalos de confianza
+prediction_ci = prediction.conf_int()
+#Media
+prediciton_mean = prediction.predicted_mean
 ```
 
 ## How to use the model:
