@@ -1,8 +1,9 @@
 # SARIMAX MODEL
 
 ## Import libraries
-
+```python
 import statsmodels.api as sm
+```
 
 ## WEB
 https://www.statsmodels.org/dev/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html
@@ -21,4 +22,4 @@ mod = sm.tsa.statespace.SARIMAX( y
 https://towardsdatascience.com/understanding-the-hyperparameters-of-a-simple-time-series-model-631f26c46c9
 
 ## Best way to approach hyperparameters:
-Gridsearch -> Machine Learning Snnipets
+Gridsearch -> https://github.com/chirlas24/snippets/blob/master/machine_learning.md
