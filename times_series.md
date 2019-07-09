@@ -1,14 +1,24 @@
-# Import libraries
+# SARIMAX MODEL
+
+## Import libraries
 
 import statsmodels.api as sm
 
-# SARIMAX model
+## WEB
+https://www.statsmodels.org/dev/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html
 
+## CODE
 ```python
-mod = sm.tsa.statespace.SARIMAX( output
+mod = sm.tsa.statespace.SARIMAX( y
                                 , trend='n'
-                                , order=(1,1,0)
-                                , seasonal_order=(0,1,1,12)
+                                , order=(p,d,q)
+                                , seasonal_order=(P,D,Q,S)
                                 , enforce_invertibility=False
                                 , freq='M'  )
 ```
+
+## Little help for the times series hyperparameters understanding
+https://towardsdatascience.com/understanding-the-hyperparameters-of-a-simple-time-series-model-631f26c46c9
+
+## Best way to approach hyperparameters:
+Gridsearch -> Machine Learning Snnipets
