@@ -117,7 +117,7 @@ def plot_times_series_prediction(df_, prediciton_mean_, prediction_ci_=None, wid
 
     #Plot de la banda de confianza si hay
     if prediction_ci_ is not None:
-        band = alt.Chart(df_plot).mark_errorband(extent='ci', color='red').encode(
+        band = alt.Chart(df_plot).mark_errorband(extent='ci', color='red', opacity=0.1).encode(
             x=alt.X('index:T'),
             y=alt.Y('value:Q')
         ).transform_filter(
